@@ -42,9 +42,6 @@ export const entries = pgTable('entries', {
       onDelete: 'cascade',
     })
     .notNull(),
-  userId: uuid('user_id').references(() => users.id, {
-    onDelete: 'cascade',
-  }),
   completionDate: timestamp('completion_date').defaultNow().notNull(),
   note: text('note'),
   createdAt: timestamp('created_at').defaultNow().notNull(),

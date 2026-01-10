@@ -12,6 +12,7 @@ const createPool = () => {
 
 let client
 
+// This help us to avoid memory leaks in dev env, when watching re starts the app when we change our code
 if (isProd()) {
   client = createPool()
 } else {
