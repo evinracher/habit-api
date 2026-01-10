@@ -7,20 +7,8 @@ This is a companion repository for the [API Design with Node.js, v5](https://fro
 
 Click [here](https://api-design-with-node-v5.super.site/) to view the course notes on Notion.
 
-### Setup Instructions
+# Setup
 
-```bash
-# Node.js 23.6.0 or higher is required for this project
-git clone https://github.com/Hendrixer/api-design-node-v5.git
-cd api-design-node-v5
-npm i
-```
+You have to created your database and setup your env file (based on env.example)
 
-### Branches
-
-- `main` is the starter project for the course
-- `lesson-X` branches represent checkpoints for starting each section [in the notes](https://api-design-with-node-v5.super.site/). These are only helpful if you wanted to start at a specific section and are not following the course from the beginning.
-- `lesson-X-solution` branches contain the completed code for each section [in the notes](https://api-design-with-node-v5.super.site/). You can `git diff` these branches with the `lesson-X` branches to see what code changed in each section
-- `live-lesson-X` branches are the live coded (solution) branches Scott pushes at the end of each section. They are similar to the `lesson-X-solution` branches.
-
-**Note:** The `live-lesson-X` branches are the best for debugging issues in your code since they match exactly what Scott codes during the course.
+Once you do that, you can run db:push to push your schemas and tables in the database. Then, you can create seed data with the script db:seed
