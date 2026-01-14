@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import { z } from 'zod'
 import { validateBody, validateParams } from '../middlewares/validation.ts'
+import { authenticateToken } from '../middlewares/auth.ts'
 
 const createHabitSchema = z.object({
   name: z.string(),
@@ -10,7 +11,9 @@ const completeHabitSchema = z.object({
   id: z.string(), // Quite redundant, but we can use .min and other utils
 })
 
-const router = Router()
+const router = Router();
+
+router.use(authenticateToken); // Apply middleware to all the endpoints in this router
 
 router.get('/', (req, res) => {
   res.json({ message: 'habits' })
