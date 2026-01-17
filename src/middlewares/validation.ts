@@ -10,6 +10,7 @@ export const validateBody = (schema: ZodSchema) => {
       next()
     } catch (error) {
       if (error instanceof ZodError) {
+        // next({ name: 'ValidationError'}) if you want to use the error handler
         return res.status(400).json({
           error: 'Validation failed',
           details: error.issues.map((issue) => ({
