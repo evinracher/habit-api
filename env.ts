@@ -14,7 +14,7 @@ const isTesting = process.env.APP_STAGE === 'test'
 if (isDevelopment) {
   loadEnv()
 } else if (isTesting) {
-  loadEnv('test')
+  loadEnv('test') // Load env.test file
 }
 
 // Expected env variables
