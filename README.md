@@ -1,6 +1,6 @@
 # Habit Tracker API (API Design with Node.js v5 - Reference)
 
-Reference repository for the **API Design with Node.js, v5** Frontend Masters course. The goal is to document backend API design patterns and implementation choices, not to ship a production app.
+Reference repository for the **API Design with Node.js, v5** Frontend Masters course: [https://frontendmasters.com/courses/api-design-nodejs-v5/](https://frontendmasters.com/courses/api-design-nodejs-v5/). Course notes: [https://api-design-with-node-v5.super.site/](https://api-design-with-node-v5.super.site/). The goal is to document backend API design patterns and implementation choices, not to ship a production app.
 
 ## What this project demonstrates
 - REST API structure with Express 5 and classic middleware flow (auth, validation, error handling).
